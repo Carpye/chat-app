@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* 
+body {
+    height: 100vh;
+} */
+
+@layer components {
+    .icon-button {
+        @apply p-1 rounded-full
+    }
+    .oauth-icon {
+        @apply text-3xl text-gray-500 cursor-pointer
+    }
+}
+
+.layout-chats {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 0.3fr 1.7fr;
+    grid-template-rows: 0.2fr 1.8fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "topbar topbar"
+        "sidebar main"
+}
+
+.layout-login, .layout-home {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 0.2fr 1.8fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "topbar"
+        "main"
+}
+
+.main { grid-area: main; }
+
+.topbar { grid-area: topbar; }
+
+.sidebar { grid-area: sidebar; }
