@@ -6,7 +6,6 @@ import EmailProvider from 'next-auth/providers/email'
 
 export const authOptions = {
   // Configure one or more authentication providers
-  
   providers: [
     CredentialsProvider({
       // name: "credentials",
@@ -63,7 +62,7 @@ export const authOptions = {
       name: "google",
       clientId: process.env.GOOGLE_ID,
       clientSecret: process.env.GOOGLE_SECRET,
-      
+    
     }),
     GithubProvider({
       name: "github",

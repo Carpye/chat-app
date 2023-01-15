@@ -55,11 +55,11 @@ export default function Page() {
 function ChatterDataPanel({id} : any) {
   const { data: session } = useSession();
 
-  const [chat] = useDocumentData(doc(db, "chats", id))
+  // const [chat] = useDocumentData(doc(db, "chats", id))
 
   return (
     <div className="uwu-info-panel flex justify-between items-center bg-base-200 p-6">
-      {getOtherEmail(chat?.users, session?.user)}
+      {/* {getOtherEmail(chat?.users, session?.user)} */} Email placeholder (to fix)
     </div>
   )
 }

@@ -1,16 +1,16 @@
 import { useSession } from "next-auth/react"
 
 export default function Message({ message, data } : { message: { sender: string, timestamp: any, text: string }, data: { first: boolean, last: boolean }}) {
-    const { data: session } = useSession();    
+    const { data: session } = useSession();  
+    const amISender = session?.user?.email == message.sender  
+    
   return (
     <>
-        <div className={`chat chat-${session?.user?.email == message.sender ? "end" : "start" }`}>
-            { data.first && <div className="chat-header mx-3">
-                {message.sender}
-            </div>}
-            <div className="chat-bubble">{message.text}</div>
-            { data.last && <div className="chat-footer opacity-50">
-                {/* <time className="text-xs opacity-50">{formatDate(message.timestamp.toDate())}</time> */}
+        <div className={`chat chat-${amISender ? "end" : "start"}` }>
+            {data.first && <div className={`chat-header`}>{message.sender}</div>}
+            <div className={`chat-bubble`}>{message.text}</div>
+            {data.last && <div className="chat-footer opacity-50">
+                <time className="text-xs">{formatDate(message?.timestamp?.toDate())}</time>
             </div>}
         </div>
     </>

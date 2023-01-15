@@ -78,3 +78,7 @@
 .uwu-container { grid-area: uwu-container; }
 
 .uwu-message-sender { grid-area: uwu-message-sender; }
+
+/* .chat.chat-end { grid-area: chat-end; } */
+
+/* .chat.chat-start { grid-area: chat-end; } */

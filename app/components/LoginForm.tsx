@@ -10,7 +10,7 @@ import {BiArrowBack} from "react-icons/bi";
 export default function LoginForm() {
     const [forgotPassword, setForgotPassword] = useState(false);
     function handleClick(provider: string) {
-        signIn(provider)
+        signIn(provider, { redirect: false, callbackUrl: "/chat" })
     }
     function handleSubmit(e:any){
         e.preventDefault()
