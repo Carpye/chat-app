@@ -7,10 +7,6 @@
     margin: 0;
     padding: 0;
 }
-/* 
-body {
-    height: 100vh;
-} */
 
 @layer components {
     .icon-button {
@@ -19,6 +15,18 @@ body {
     .oauth-icon {
         @apply text-3xl text-gray-500 cursor-pointer
     }
+    
+}
+.bg-hero {
+	height: 100vh;
+	width: 100vw;
+	background: radial-gradient(at 18% 99%, rgb(223, 229, 113) 0px, transparent 50%) repeat scroll 0% 0%, 
+                radial-gradient(at 97% 8%, rgb(118, 249, 173) 0px, transparent 50%) repeat scroll 0% 0%, 
+                radial-gradient(at 79% 82%, rgb(233, 109, 131) 0px, transparent 50%) repeat scroll 0% 0%,
+                radial-gradient(at 96% 10%, rgb(222, 81, 251) 0px, transparent 50%) repeat scroll 0% 0%,    
+                radial-gradient(at 42% 20%, rgb(116, 240, 251) 0px, transparent 50%) repeat scroll 0% 0%,
+                radial-gradient(at 4% 49%, rgb(203, 88, 218) 0px, transparent 50%) repeat scroll 0% 0%,
+                radial-gradient(at 57% 33%, rgb(218, 83, 228) 0px, #a299ff 50%) repeat scroll 0% 0%;
 }
 
 .layout-chats {
@@ -49,3 +57,24 @@ body {
 .topbar { grid-area: topbar; }
 
 .sidebar { grid-area: sidebar; }
+
+#newchatemail::placeholder {
+    text-align: center;
+}
+
+.uwu-panel{
+    display: grid;
+    grid-template-rows: 0.1fr 1.7fr 0.2fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "uwu-info-panel"
+        "uwu-container"
+        "uwu-message-sender";
+}
+
+
+.uwu-info-panel { grid-area: uwu-info-panel; }
+
+.uwu-container { grid-area: uwu-container; }
+
+.uwu-message-sender { grid-area: uwu-message-sender; }
